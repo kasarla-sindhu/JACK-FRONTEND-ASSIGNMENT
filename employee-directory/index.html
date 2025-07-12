@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Employee Directory</h1>
+    <input id="searchInput" placeholder="Search by name or email" />
+    <input id="departmentFilter" placeholder="Filter by Department" />
+    <input id="roleFilter" placeholder="Filter by Role" />
+    <button onclick="applyAllFilters()">Apply Filters</button>
+    <select id="sortSelect" onchange="sortEmployees()">
+      <option value="">--Sort--</option>
+      <option value="firstName">First Name</option>
+      <option value="department">Department</option>
+    </select>
+    <button onclick="location.href='add-edit.html'">Add Employee</button>
+  </header>
+  <div id="employeeList"></div>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

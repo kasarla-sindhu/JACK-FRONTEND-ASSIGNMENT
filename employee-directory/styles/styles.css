@@ -1,0 +1,165 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+header input,
+header select,
+header button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+header button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+header button:hover {
+  background-color: #0056b3;
+}
+
+/* Employee List */
+#employeeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Employee Card */
+.employee-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.employee-card:hover {
+  transform: translateY(-3px);
+}
+
+.employee-card h3 {
+  margin-bottom: 5px;
+  color: #007bff;
+}
+
+.employee-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.employee-card button {
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.employee-card button:first-of-type {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.employee-card button:last-of-type {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Form Styling */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+form h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+form input,
+form button {
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+form button[type="button"] {
+  background-color: #6c757d;
+}
+
+form button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+/* Pagination Buttons */
+#employeeList > div:last-child button {
+  margin: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#employeeList > div:last-child button:hover {
+  background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .employee-card {
+    width: 100%;
+  }
+}
